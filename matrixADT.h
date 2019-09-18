@@ -12,6 +12,9 @@ class matrix
 		int getRows();
 		int getColumns();
 		bool addition(matrix* A, matrix* B);
+		bool multiplication(matrix* A, matrix* B);
+		void randomize();
+
 	private:
 		int rows = 0;
 		int columns = 0;

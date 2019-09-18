@@ -53,7 +53,12 @@ bool matrix::multiplication(matrix* A, matrix* B)
 	
 	if (Acol != Brow)
 		return false;
-	
-	//TODO: COMPLETE THE MATRIX MULTIPLICATION MATH HERE
-	//TODO: IF THE PROGRAM GOT TO THIS POINT THE MATRICES ARE VALID
+
+
+	for (int i = 0; i < Arow; ++i)
+		for (int k = 0; k < Bcol; ++k)
+			for (int j = 0; j < Acol; ++j)
+				grid[i][k] += A -> getValue(i, j) * B -> getValue(j, k);
+
+	return true;
 }

@@ -14,7 +14,7 @@ matrix::matrix(int rows, int columns)
 	
 	for (int r = 0; r < rows; ++r)
 		for (int c = 0; c < columns; ++c)
-			grid[r][c] = rand() % 100;
+			grid[r][c] = 0;
 }
 
 matrix::~matrix()
@@ -71,3 +71,12 @@ void matrix::display()
 		cout << "|" << endl;
 	}
 }
+
+
+void matrix::randomize()
+{
+	for (int r = 0; r < rows; ++r)
+		for (int c = 0; c < columns; ++c)
+			grid[r][c] = rand() % 100;	
+}
+
