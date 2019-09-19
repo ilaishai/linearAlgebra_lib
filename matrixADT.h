@@ -14,6 +14,7 @@ class matrix
 		bool addition(matrix* A, matrix* B);
 		bool multiplication(matrix* A, matrix* B);
 		void randomize();
+		void transpose();
 
 	private:
 		int rows = 0;

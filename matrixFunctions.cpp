@@ -62,3 +62,26 @@ bool matrix::multiplication(matrix* A, matrix* B)
 
 	return true;
 }
+
+
+void matrix::transpose()
+{
+	int tempVar;
+	tempVar = columns;
+	columns = rows;
+	rows = tempVar;
+
+	float** newGrid = new float*[rows];
+	for (int r = 0; r < rows; ++r)
+		newGrid[r] = new float[columns];
+	
+	for (int r = 0; r < rows; ++r)
+		for (int c = 0; c < columns; ++c)
+			newGrid[r][c] = grid[c][r];
+
+	for (int c = 0; c < columns; ++c)
+		delete[] grid[c];
+	delete[] grid;
+
+	grid = newGrid;
+}
