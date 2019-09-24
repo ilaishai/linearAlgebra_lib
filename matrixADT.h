@@ -1,3 +1,6 @@
+#ifndef MATRIX
+#define MATRIX
+
 using namespace std;
 
 class matrix
@@ -21,3 +24,5 @@ class matrix
 		int columns = 0;
 		float** grid;
 };
+
+#endif
