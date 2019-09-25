@@ -19,6 +19,7 @@ class matrix
 		void randomize();
 		void randomize(int lowNum, int highNum);
 		void transpose();
+		void applyFunc(float (*function) (float));
 
 	private:
 		int rows = 0;

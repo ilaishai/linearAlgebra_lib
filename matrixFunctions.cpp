@@ -85,3 +85,11 @@ void matrix::transpose()
 
 	grid = newGrid;
 }
+
+
+void matrix::applyFunc(float (*function) (float))
+{	
+	for (int r = 0; r < rows; ++r)
+		for (int c = 0; c < columns; ++c)
+			grid[r][c] = function(grid[r][c]);
+}
