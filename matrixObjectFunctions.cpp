@@ -77,6 +77,18 @@ void matrix::randomize()
 {
 	for (int r = 0; r < rows; ++r)
 		for (int c = 0; c < columns; ++c)
-			grid[r][c] = rand() % 100;	
+		{
+			grid[r][c] = rand() % 100;
+		}
 }
 
+
+void matrix::randomize(int lowNum, int highNum)
+{
+	for (int r = 0; r < rows; ++r)
+		for (int c = 0; c < columns; ++c)
+		{
+			grid[r][c] = ((float) rand() / (float) RAND_MAX) * (highNum - lowNum) + lowNum;
+			cout << grid[r][c] << endl;
+		}
+}

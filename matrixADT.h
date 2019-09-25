@@ -17,6 +17,7 @@ class matrix
 		bool addition(matrix* A, matrix* B);
 		bool multiplication(matrix* A, matrix* B);
 		void randomize();
+		void randomize(int lowNum, int highNum);
 		void transpose();
 
 	private:

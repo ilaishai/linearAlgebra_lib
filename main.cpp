@@ -18,7 +18,7 @@ int main()
 		cin >> columns1;
 		cin.ignore(100, '\n');
 		matrix test(rows1, columns1);
-		test.randomize();
+		test.randomize(-5, 10);
 		test.display();
 
 		test.transpose();
